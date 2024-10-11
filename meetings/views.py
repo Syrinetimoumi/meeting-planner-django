@@ -34,3 +34,6 @@ def meetings_list_view(request):
         meetings = Meeting.objects.all()  # Get all meetings
         return render(request, 'meetings.html', {'meetings': meetings, })
     
+def detail(request, id):
+    meeting = get_object_or_404(Meeting, id=id)  # Correct model name and function
+    return render(request, "detail.html", {"meeting": meeting})

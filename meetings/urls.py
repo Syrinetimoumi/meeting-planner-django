@@ -8,7 +8,7 @@ from . import views
 #domain.com/meetings/new
 
 urlpatterns=[
-  path('<int:id>',views.detail, name="detail"),
+  path('detail/<int:id>',views.detail, name="detail"),
 
   path('rooms', views.rooms_list, name="rooms"),
 
